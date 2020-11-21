@@ -414,6 +414,19 @@ footer small{
   background-color: #f6f6f6;
   cursor: pointer;
 }
+
+.box-account .dropdown ul.dropdown-menu li:hover{
+  background-color: #27B899; 
+  cursor: pointer;
+}
+.box-account .dropdown ul.dropdown-menu li a{
+  font-family: DBHeavent;
+  color: #000;
+  padding-left: 10px;
+}
+.box-account .dropdown ul.dropdown-menu li:hover a{
+  color: #fff;
+}
 .box-account .box ul li:hover{
   background-color: #E7F0EF;
 }
@@ -701,6 +714,10 @@ header.convers .navbar-nav .nav-item  .dropdown-item:hover{
 #sidebar-wrapper .sidebar-heading {
   padding: 0.875rem 1.25rem;
   font-size: 1.2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ddd;
 }
 
 #sidebar-wrapper .list-group {
@@ -728,4 +745,39 @@ header.convers .navbar-nav .nav-item  .dropdown-item:hover{
   #wrapper.toggled #sidebar-wrapper {
     margin-left: -15rem;
   }
+}
+
+
+
+.bg-al , .list-group-item{
+  background-color: #3e4146;
+  color: #fff;
+}
+.missing-x{
+  width: 32px;
+  height: 32px;
+}
+.list-group-item{
+  padding-left: 45px;
+  color: #AAAFB3;
+  font-family: DBHeavent;
+  font-size: 18px;
+  padding-top: 5px;
+  border-top: 1px solid #555 !important;
+  padding-bottom: 5px;
+}
+
+.list-group-item i{
+  position: absolute;
+  left: 0;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.list-group span{
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  color: #85888d;
+  font-family: DBHeavent;
+  font-size: 20px;
 }
