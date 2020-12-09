@@ -41,6 +41,27 @@
 .lt2{
   z-index: 1;
 }
+.lt2 .load-chat{ 
+  position: absolute;
+  overflow: auto;
+  right: 0;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.lt2 .f-chat{
+  border-top: 1px solid #dedede;
+  background-color: #EFEFEF;
+  bottom: 0 !important;
+  margin-bottom: 0px !important;
+  left: 0;
+  width: 100%background: ;
+  right: 0;
+  font-family: DBHeaventBd;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 22px; 
+}
  
 @media only screen and (max-width: 991px) { /* MOBILE */
   .mb-x{
@@ -511,7 +532,7 @@ header.convers .navbar-nav .nav-item  .dropdown-item:hover{
   
 }
 .tab-convers .nav{
-  height: 94.5vh;
+  height: calc( 100vh - 52px );
   width: 60px;
   background-color: #BFC4C7;
 }
@@ -1325,6 +1346,12 @@ header.convers .navbar-nav .nav-item  .dropdown-item:hover{
     font-size: 13px;
     margin-right: 10px;
   }
+  .lt2 .load-chat{
+    height: calc( 100vh - 120px ); 
+  }
+  .lt2 .f-chat{ 
+    position: fixed;
+  }
 }
 @media only screen and (min-width: 992px) { /* PC */
   .customer-1 .picx{ 
@@ -1358,7 +1385,7 @@ header.convers .navbar-nav .nav-item  .dropdown-item:hover{
   }
   .main-chat{
     display: block;
-    height: 63vh; 
+    height: calc( 100vh - 360px );
     overflow: auto;
     width: 100%; 
     margin-bottom: 90px;
@@ -1377,5 +1404,11 @@ header.convers .navbar-nav .nav-item  .dropdown-item:hover{
   .reply-tools .reply-button{ 
     font-size: 18px;
     margin-right: 10px;
+  }
+  .lt2 .load-chat{
+    height: calc( 100vh - 180px ); 
+  }
+  .lt2 .f-chat{ 
+    position: absolute;
   }
 }

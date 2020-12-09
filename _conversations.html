@@ -203,8 +203,55 @@
                               </div>
                               <div class="tab-content" id="myTabContent">
                                  <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="t1">
-                                    <div class="load-chat"></div>
-                                    <div class="f-chat">แสดงบทสนทนาที่เปิดบิล 1 บทสนทนา</div>
+                                    <div class="col chat-box">
+                                       <input type="checkbox" class="form-check-input" >
+                                       <i class="fab fa-facebook-messenger"></i>
+                                       <h4 class="name-text">น้องพิมเพลิน</h4>
+                                       <h5 class="des-text">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                       </h5>
+                                       <div class="convers-date">
+                                          7 ธ.ค. 19
+                                       </div>
+                                       <p class="aw-r"><i class="fas fa-shopping-cart"></i></p>
+                                    </div>
+                                    <div class="col chat-box">
+                                       <input type="checkbox" class="form-check-input" >
+                                       <i class="fab fa-facebook-messenger"></i>
+                                       <h4 class="name-text">AAAA</h4>
+                                       <h5 class="des-text">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                       </h5>
+                                       <div class="convers-date">
+                                          7 ธ.ค. 19
+                                       </div>
+                                    </div>
+                                    <div class="col chat-box">
+                                       <input type="checkbox" class="form-check-input" >
+                                       <i class="fab fa-facebook-messenger"></i>
+                                       <h4 class="name-text">AAAA</h4>
+                                       <h5 class="des-text">
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                       </h5>
+                                       <div class="convers-date">
+                                          7 ธ.ค. 19
+                                       </div>
+                                    </div>
                                  </div>
                                  <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="t2">
                                     <div class="col chat-box">
@@ -949,8 +996,8 @@
  
    <script>
       $("#menu-toggle").click(function(e) {
-          e.preventDefault();
-          $("#wrapper").toggleClass("toggled");
+         e.preventDefault();
+         $("#wrapper").toggleClass("toggled");
       });
 
       $(".tab-pane .chat-box").click(function() {
@@ -960,105 +1007,72 @@
          $(".tx3").show();         
       });
 
-      $('.tab-pane').on('click', '.chat-box', function() {
-          $(".chat-box").removeClass("active");
-          $(this).addClass("active");
-          $(".tx2").show();
-          $(".tx3").show();
-      });
-
       $(".nav-pills .nav-item").click(function() {
-          $(".reply-button").removeClass("active");
-          $(".tx2").hide();
-          $(".tx3").hide();
+         $(".reply-button").removeClass("active");     
+         $(".tx2").hide(); 
+         $(".tx3").hide();     
       });
       $('.reply').keyup(function() {
-          if ($('.reply').val() != '') {
-              $(".reply-button").removeClass("disabled");
-              $(".reply-button").css({
-                  cursor: "pointer"
-              });
-          } else {
-              $(".reply-button").addClass("disabled");
-          }
+         if ($('.reply').val() != ''){
+            $(".reply-button").removeClass("disabled");  
+            $(".reply-button").css({ cursor: "pointer" });
+         }
+         else{
+            $(".reply-button").addClass("disabled");  
+         }
       });
-
 
       $(document).ready(function() {
+        
+         var width = $(window).width();
+         if (width<992) {
+            $(".tab-pane .chat-box").click(function() {
+               $(".chat-box").removeClass("active");
+               $(this).addClass("active"); 
+               $(".tx1").hide(); 
+               $(".tx2").show(); 
+               $(".tx3").hide();         
+            });
 
-          loadChat();
+            $(".nav-pills .nav-item").click(function() {
+               $(".reply-button").removeClass("active");      
+               $(".tx1").show(); 
+               $(".tx2").hide(); 
+               $(".tx3").hide();     
+            });; 
 
-          /************************ */
-          var width = $(window).width();
-          if (width < 992) {
-              $(".tab-pane .chat-box").click(function() {
-                  $(".chat-box").removeClass("active");
-                  $(this).addClass("active");
-                  $(".tx1").hide();
-                  $(".tx2").show();
-                  $(".tx3").hide();
-              });
+            $(".messagex").click(function() { 
+               $(".tx1").show(); 
+               $(".tx2").hide(); 
+               $(".tx3").hide();     
+            });; 
+            $(".billx").click(function() { 
+               $(".tx1").hide(); 
+               $(".tx2").hide(); 
+               $(".tx3").show();     
+            });; 
 
-              $(".nav-pills .nav-item").click(function() {
-                  $(".reply-button").removeClass("active");
-                  $(".tx1").show();
-                  $(".tx2").hide();
-                  $(".tx3").hide();
-              });;
+            $(".chatx-b").click(function() { 
+               $(".tx1").hide(); 
+               $(".tx2").show(); 
+               $(".tx3").hide();     
+            });; 
 
-              $(".messagex").click(function() {
-                  $(".tx1").show();
-                  $(".tx2").hide();
-                  $(".tx3").hide();
-              });;
-              $(".billx").click(function() {
-                  $(".tx1").hide();
-                  $(".tx2").hide();
-                  $(".tx3").show();
-              });;
-
-              $(".chatx-b").click(function() {
-                  $(".tx1").hide();
-                  $(".tx2").show();
-                  $(".tx3").hide();
-              });;
-
-          }
-
-          $('.date').datepicker({
-              format: "dd/mm/yyyy",
-              todayBtn: "linked",
-              language: "en",
-              autoclose: true,
-              todayHighlight: true
-          });
+         }
+ 
+        
+     });	
 
 
-      });
+		$('.date').datepicker({
+         format: "dd/mm/yyyy",
+         todayBtn: "linked",
+         language: "en",
+         autoclose: true,
+         todayHighlight: true
+      }); 
 
-      function loadChat() {
-         var live_id = "<?= $live_id; ?>";
-         var chat;
-
-         $.getJSON( "json.json", function( res ) {
-         for (var key in res) {
-               chat = `
-                 <div class="col chat-box">
-                     <input type="checkbox" class="form-check-input">
-                     <i class="fab fa-facebook-messenger"></i>
-                     <h4 class="name-text">` + res[key].facebook + `</h4>
-                     <h5 class="des-text"></h5>
-                     <div class="convers-date">7 ธ.ค. 19</div>
-                     <p class="aw-r"><i class="fas fa-shopping-cart"></i></p>
-                 </div>
-               `;
-
-               $(".load-chat").append(chat);
-            }
-         })
-
-      }
-  </script>
+   </script>
 </body>
  
 </html>
