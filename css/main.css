@@ -41,8 +41,7 @@
 .lt2{
   z-index: 1;
 }
-.lt2 .load-chat{ 
-  position: absolute;
+.lt2 .load-chat{  
   overflow: auto;
   right: 0;
   width: 100%;
@@ -1406,7 +1405,7 @@ header.convers .navbar-nav .nav-item  .dropdown-item:hover{
     margin-right: 10px;
   }
   .lt2 .load-chat{
-    height: calc( 100vh - 180px ); 
+    height: calc( 100vh - 280px ); 
   }
   .lt2 .f-chat{ 
     position: absolute;
