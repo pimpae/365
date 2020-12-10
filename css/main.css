@@ -1405,7 +1405,7 @@ header.convers .navbar-nav .nav-item  .dropdown-item:hover{
     margin-right: 10px;
   }
   .lt2 .load-chat{
-    height: calc( 100vh - 280px ); 
+    height: calc( 100vh - 180px ); 
   }
   .lt2 .f-chat{ 
     position: absolute;
